@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edwin's Website Quick Start</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header" class="header">
+    <div class="top-container hidden1 floating-bottom-right hide-on-mobile-flex">
+        <div class="social-div">
+            <a href="#"><img height="20" width="auto" src="icons/twitter.svg" alt="" class="icons"></a>
+            <a href="#"><img height="20" width="auto" src="icons/facebook.svg" alt="" class="icons"></a>
+            <a href="#"><img height="20" width="auto" src="icons/google.svg" alt="" class="icons"></a>
+            <a href="#"><img height="20" width="auto" src="icons/instagram.svg" alt="" class="icons"></a>
+            <a href="#"><img height="20" width="auto" src="icons/email.svg" alt="" class="icons"></a>
+        </div>
+        <div class="contact-div">
+            <p><img height="10" width="auto" src="old-typical-phone.svg" alt=""></p>
+            <p>+234 8054807297</p>
+        </div>
+    </div>
+    <div class="navbar">
+        <div class="navbar__left">
+            <img height="35" width="auto" src="quickstart.png" alt="Logo Image" class="site-logo">
+            <h3 class="site-title">QuickStart</h3>
+            <img id="harmburger" class="hide-on-desktop" height="50" width="auto" src="icons8-menu.svg" alt="">
+        </div>
+        <div class="navbar__right">
+            <ul id="menuitems" class="menu-items hide-on-mobile">
+                <li>
+                    <a href="#" class="menu-item">About</a>
+                </li>
+                <li>
+                    <a href="#" class="menu-item">Services</a>
+                </li>
+                <li>
+                    <a href="#" class="menu-item">News</a>
+                </li>
+                <li>
+                    <a href="#" class="menu-item">Help</a>
+                </li>
+                <li>
+                    <a href="#" class="menu-item">Contact</a>
+                </li>
+                <input id="search-input" class="search-input" type="text" placeholder="Search...">&nbsp;
+                <a id="toggle-search" href="#"><img height="20" width="auto" src="icons/loupe_white.svg" alt="" class="icons"></a>                
+                <img class="user-img menu-item block" height="30" src="user.png" alt="">
+                <img class="" height="10" width="8" src="icons/caret-down.svg" alt="" style="cursor: pointer;">
+            </ul>
+        </div>
+    </div>
+    <div class="header__right">
+        <h1>Why go to the moon when you can have it in a jar!</h1>
+        <!-- <img width="380px" height="auto" src="https://www.akcpetinsurance.com/res/akc/images/icons/home/home_dog.png" alt=""> -->
+    </div>
+    </div>
+</body>
+
+<script>
+    const harmbar = document.getElementById("harmburger");
+    const menuItems = document.getElementById("menuitems")
+    const toggleSearch = document.getElementById('toggle-search')
+    const searchInput = document.getElementById('search-input')
+
+    harmbar.addEventListener("click", () => {
+        if (menuItems.style.display === "" || menuItems.style.display === "none") {
+            menuItems.style.display = "block"
+        } else {
+            menuItems.style.display = "none"
+        }
+
+    })
+    toggleSearch.addEventListener("click", () => {
+        searchInput.classList.toggle('fade');
+        // if (searchInput.style.display === "" || searchInput.style.display === null || searchInput.style.display === "none") {
+        //     searchInput.classList.toggle('fade');
+        // } else {
+        //     searchInput.classList.toggle('fade');
+        // }
+    })
+</script>
+<script src="./js/settings.js"></script>
+<script src="./js/main.js"></script>
+</html>
